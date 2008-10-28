@@ -6,7 +6,7 @@ Version:	0.6.0
 Release:	%mkrel -c %{prel} 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-Url:		http://www.xfce.org
+Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}%{prel}.tar.bz2
 BuildRequires:	xfconf-devel
 BuildRequires:	hal-devel
