@@ -3,7 +3,7 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.6.0
-Release:	%mkrel -c %{prel} 2
+Release:	%mkrel -c %{prel} 3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
@@ -16,6 +16,7 @@ BuildRequires:	intltool
 BuildRequires:	libxfcegui4-devel
 Requires:	pm-utils
 Requires:	hibernate
+Requires:	suspend-s2ram
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
