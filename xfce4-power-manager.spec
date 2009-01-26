@@ -1,13 +1,11 @@
-%define prel RC1
-
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.6.0
-Release:	%mkrel 1.%{prel}.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
-Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}%{prel}.tar.bz2
+Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}.tar.bz2
 BuildRequires:	xfconf-devel
 BuildRequires:	hal-devel
 BuildRequires:	dbus-glib-devel
@@ -23,7 +21,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 A power manager dedicated for Xfce desktop environment.
 
 %prep
-%setup -qn %{name}-%{version}%{prel}
+%setup -qn %{name}-%{version}
 
 %build
 %configure2_5x \
