@@ -57,7 +57,7 @@ A power manager dedicated for Xfce desktop environment.
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS NEWS README TODO
-%{_bindir}/%{name}
+%{_bindir}/%{name}*
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/scalable/*/*.svg
 %{_datadir}/xfce4/doc/C/images/*.png
