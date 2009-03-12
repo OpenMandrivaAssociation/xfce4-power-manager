@@ -1,11 +1,13 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.6.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}.tar.bz2
+Source1:	%{name}.desktop
+Patch0:		xfce4-power-manager-0.6.4-dont-generate-autostart-file.patch
 BuildRequires:	xfconf-devel
 BuildRequires:	hal-devel
 BuildRequires:	dbus-glib-devel
@@ -21,7 +23,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 A power manager dedicated for Xfce desktop environment.
 
 %prep
-%setup -qn %{name}-%{version}
+%setup -q
+%patch0 -p1
 
 %build
 %configure2_5x \
@@ -34,6 +37,9 @@ A power manager dedicated for Xfce desktop environment.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std
+
+mkdir -p %{buildroot}%{_sysconfdir}/xdg/autostart
+cp -f %{SOURCE1} %{buildroot}%{_sysconfdir}/xdg/autostart/
 
 %find_lang %{name}
 
@@ -58,6 +64,7 @@ A power manager dedicated for Xfce desktop environment.
 %defattr(-,root,root)
 %doc AUTHORS NEWS README TODO
 %{_bindir}/%{name}*
+%{_sysconfdir}/xdg/autostart/*.desktop
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/scalable/*/*.svg
 %{_datadir}/xfce4/doc/C/images/*.png
