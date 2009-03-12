@@ -1,7 +1,7 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.6.4
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
@@ -17,6 +17,7 @@ BuildRequires:	libxfcegui4-devel
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
+Conflicts:	mandriva-xfce-config-common < 2009.1-2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
