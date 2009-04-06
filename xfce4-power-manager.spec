@@ -13,6 +13,7 @@ BuildRequires:	dbus-glib-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	intltool
 BuildRequires:	libxfcegui4-devel
+BuildRequires:	libxfce4-panel-devel
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
