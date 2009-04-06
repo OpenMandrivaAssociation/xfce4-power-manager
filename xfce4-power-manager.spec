@@ -1,13 +1,12 @@
+%define subrel alpha2
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	0.6.4
-Release:	%mkrel 3
+Version:	0.8.0
+Release:	%mkrel -c %subrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
-Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}.tar.bz2
-Source1:	%{name}.desktop
-Patch0:		xfce4-power-manager-0.6.4-dont-generate-autostart-file.patch
+Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}%{subrel}.tar.bz2
 BuildRequires:	xfconf-devel
 BuildRequires:	hal-devel
 BuildRequires:	dbus-glib-devel
@@ -24,8 +23,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 A power manager dedicated for Xfce desktop environment.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -qn %{name}-%{version}%{subrel}
 
 %build
 %configure2_5x \
@@ -38,9 +36,6 @@ A power manager dedicated for Xfce desktop environment.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %makeinstall_std
-
-mkdir -p %{buildroot}%{_sysconfdir}/xdg/autostart
-cp -f %{SOURCE1} %{buildroot}%{_sysconfdir}/xdg/autostart/
 
 %find_lang %{name}
 
@@ -64,9 +59,13 @@ cp -f %{SOURCE1} %{buildroot}%{_sysconfdir}/xdg/autostart/
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS NEWS README TODO
-%{_bindir}/%{name}*
 %{_sysconfdir}/xdg/autostart/*.desktop
+%{_bindir}/%{name}*
+%{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
+%{_libdir}/xfce4/panel-plugins/xfce4-inhibit-plugin
 %{_datadir}/applications/*.desktop
-%{_iconsdir}/hicolor/scalable/*/*.svg
 %{_datadir}/xfce4/doc/C/images/*.png
 %{_datadir}/xfce4/doc/C/xfce4-power-manager.html
+%{_datadir}/xfce4/panel-plugins/*.desktop
+%{_iconsdir}/hicolor/scalable/*/*.svg
+%{_mandir}/man1/*
