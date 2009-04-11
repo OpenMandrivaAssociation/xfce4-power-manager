@@ -1,8 +1,8 @@
-%define subrel alpha2
+%define subrel beta1
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.8.0
-Release:	%mkrel -c %subrel 1
+Release:	%mkrel -c %subrel 2
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
