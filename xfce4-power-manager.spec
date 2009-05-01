@@ -1,8 +1,8 @@
-%define subrel beta1
+%define subrel RC1
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.8.0
-Release:	%mkrel -c %subrel 2
+Release:	%mkrel -c %subrel 3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
@@ -63,7 +63,7 @@ A power manager dedicated for Xfce desktop environment.
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_bindir}/%{name}*
 %{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
-%{_libdir}/xfce4/panel-plugins/xfce4-inhibit-plugin
+#%{_libdir}/xfce4/panel-plugins/xfce4-inhibit-plugin
 %{_datadir}/applications/*.desktop
 %{_datadir}/xfce4/doc/C/images/*.png
 %{_datadir}/xfce4/doc/C/xfce4-power-manager.html
