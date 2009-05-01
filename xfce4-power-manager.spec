@@ -6,7 +6,7 @@ Release:	%mkrel 0.%rel.3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
-Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}%{subrel}.tar.bz2
+Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}%{rel}.tar.bz2
 BuildRequires:	xfconf-devel
 BuildRequires:	hal-devel
 BuildRequires:	dbus-glib-devel
@@ -24,7 +24,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 A power manager dedicated for Xfce desktop environment.
 
 %prep
-%setup -qn %{name}-%{version}%{subrel}
+%setup -qn %{name}-%{version}%{rel}
 
 %build
 %configure2_5x \
