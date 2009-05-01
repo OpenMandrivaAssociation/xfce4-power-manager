@@ -2,7 +2,7 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.8.0
-Release:	%mkrel -c %rel 3
+Release:	%mkrel 0.%rel.3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
