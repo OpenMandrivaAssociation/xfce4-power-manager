@@ -1,8 +1,9 @@
-%define rel RC1
+%define rel RC2
+
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.8.0
-Release:	%mkrel -c %rel 3
+Release:	%mkrel -c %rel 1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -30,7 +31,7 @@ A power manager dedicated for Xfce desktop environment.
 %build
 %configure2_5x \
 	--enable-dpms \
-	--enable-libnotify
+	--enable-panel-plugins
 
 %make
 
