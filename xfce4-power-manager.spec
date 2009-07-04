@@ -63,7 +63,7 @@ A power manager dedicated for Xfce desktop environment.
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_bindir}/%{name}*
 %{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
-%{_libdir}/%{name}/ui/*.ui
+%{_datadir}/%{name}/ui/*.ui
 %{_datadir}/applications/*.desktop
 %{_datadir}/xfce4/doc/C/images/*.png
 %{_datadir}/xfce4/doc/C/xfce4-power-manager.html
