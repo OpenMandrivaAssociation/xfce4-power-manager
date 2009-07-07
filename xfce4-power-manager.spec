@@ -1,6 +1,6 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	0.8.1
+Version:	0.8.1.1
 Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2+
@@ -63,7 +63,6 @@ A power manager dedicated for Xfce desktop environment.
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_bindir}/%{name}*
 %{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
-%{_datadir}/%{name}/ui/*.ui
 %{_datadir}/applications/*.desktop
 %{_datadir}/xfce4/doc/C/images/*.png
 %{_datadir}/xfce4/doc/C/xfce4-power-manager.html
