@@ -1,3 +1,5 @@
+%define url_ver %(echo %{version} | cut -c 1-3)
+
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	0.8.3.1
@@ -6,7 +8,7 @@ Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
-Source0:	http://goodies.xfce.org/releases/xfce4-power-manager/%{name}-%{version}.tar.bz2
+Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	xfconf-devel
 BuildRequires:	hal-devel
 BuildRequires:	dbus-glib-devel
