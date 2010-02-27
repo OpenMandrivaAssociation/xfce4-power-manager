@@ -2,7 +2,7 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	0.8.4.2
+Version:	0.9.90
 Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2+
@@ -16,10 +16,14 @@ BuildRequires:	libnotify-devel
 BuildRequires:	intltool
 BuildRequires:	libxfcegui4-devel
 BuildRequires:	libxfce4-panel-devel
+BuildRequires:	polkit-1-devel
+BuildRequires:	libxfce4ui-devel
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
+Requires:	devicekit-power
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
+Requires(pre):	xfconf
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -31,7 +35,10 @@ A power manager dedicated for Xfce desktop environment.
 %build
 %configure2_5x \
 	--enable-dpms \
-	--enable-panel-plugins
+	--enable-panel-plugins \
+	--enable-network-manager \
+	--enable-hal \
+	--enable-polkit
 
 %make
 
@@ -64,10 +71,12 @@ A power manager dedicated for Xfce desktop environment.
 %doc AUTHORS NEWS README TODO
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_bindir}/%{name}*
+%{_bindir}/xfce4-power-information
 %{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
 %{_datadir}/applications/*.desktop
 %{_datadir}/xfce4/doc/C/images/*.png
 %{_datadir}/xfce4/doc/C/xfce4-power-manager.html
 %{_datadir}/xfce4/panel-plugins/*.desktop
 %{_iconsdir}/hicolor/scalable/*/*.svg
+%{_iconsdir}/hicolor/*/*/*.png
 %{_mandir}/man1/*
