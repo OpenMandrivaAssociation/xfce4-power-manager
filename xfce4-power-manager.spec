@@ -2,7 +2,7 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.0.2
+Version:	1.0.3
 Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2+
@@ -10,7 +10,6 @@ Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	xfconf-devel
-BuildRequires:	hal-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	intltool
@@ -37,7 +36,6 @@ A power manager dedicated for Xfce desktop environment.
 	--enable-dpms \
 	--enable-panel-plugins \
 	--enable-network-manager \
-	--enable-hal \
 	--enable-polkit
 
 %make
@@ -70,9 +68,11 @@ A power manager dedicated for Xfce desktop environment.
 %defattr(-,root,root)
 %doc AUTHORS NEWS README TODO
 %{_sysconfdir}/xdg/autostart/*.desktop
+%{_sbindir}/xfpm-power-backlight-helper
 %{_bindir}/%{name}*
 %{_bindir}/xfce4-power-information
 %{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
+%{_datadir}/polkit-1/actions/org.xfce.power.policy
 %{_datadir}/applications/*.desktop
 %{_datadir}/xfce4/doc/C/images/*.png
 %{_datadir}/xfce4/doc/C/xfce4-power-manager.html
