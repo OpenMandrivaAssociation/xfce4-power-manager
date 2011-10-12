@@ -3,7 +3,7 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	1.0.10
-Release:	%mkrel 4
+Release:	%mkrel 5
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
