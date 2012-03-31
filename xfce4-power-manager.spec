@@ -2,14 +2,13 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.0.10
-Release:	%mkrel 5
+Version:	1.0.11
+Release:	%mkrel 1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
-Patch0:		xfce4-power-manager-1.0.10-libnotify-0.7.patch
 BuildRequires:	xfconf-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	libnotify-devel
@@ -31,7 +30,6 @@ A power manager dedicated for Xfce desktop environment.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure2_5x \
