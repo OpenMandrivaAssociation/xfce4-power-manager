@@ -3,27 +3,25 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	1.0.11
-Release:	%mkrel 1
+Release:	2
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	xfconf-devel
+BuildRequires:	xfconf-devel >= 4.9.0
 BuildRequires:	dbus-glib-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	intltool
-BuildRequires:	libxfcegui4-devel
-BuildRequires:	libxfce4-panel-devel
+BuildRequires:	libxfce4-panel-devel >= 4.9.1
 BuildRequires:	polkit-1-devel
-BuildRequires:	libxfce4ui-devel
+BuildRequires:	libxfce4ui-devel >= 4.9.1
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
 Requires:	upower
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
 Requires(pre):	xfconf
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A power manager dedicated for Xfce desktop environment.
@@ -41,31 +39,11 @@ A power manager dedicated for Xfce desktop environment.
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std
 
-%find_lang %{name}
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%{update_desktop_database}
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%{clean_desktop_database}
-%clean_icon_cache hicolor
-%endif
-
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+%find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS NEWS README TODO
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_sbindir}/xfpm-power-backlight-helper
