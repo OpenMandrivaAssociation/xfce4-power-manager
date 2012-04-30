@@ -2,20 +2,20 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	xfconf-devel >= 4.9.0
+BuildRequires:	xfconf-devel >= 4.10.0
 BuildRequires:	dbus-glib-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	intltool
 BuildRequires:	libxfce4-panel-devel >= 4.9.1
 BuildRequires:	polkit-1-devel
-BuildRequires:	libxfce4ui-devel >= 4.9.1
+BuildRequires:	libxfce4ui-devel >= 4.10.0
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
