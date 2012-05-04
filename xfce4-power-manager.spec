@@ -13,7 +13,7 @@ BuildRequires:	xfconf-devel >= 4.10.0
 BuildRequires:	dbus-glib-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	intltool
-BuildRequires:	libxfce4-panel-devel >= 4.9.1
+BuildRequires:	libxfce4-panel-devel >= 4.10.0
 BuildRequires:	polkit-1-devel
 BuildRequires:	libxfce4ui-devel >= 4.10.0
 Requires:	pm-utils
