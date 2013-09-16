@@ -3,23 +3,24 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	1.2.0
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	xfconf-devel >= 4.10.0
-BuildRequires:	dbus-glib-devel
-BuildRequires:	libnotify-devel
+# (tpg) https://bugzilla.xfce.org/show_bug.cgi?id=9963
+Patch0:		xfce4-power-manager-1.2.0-add-systemd-logind-support.patch
+BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
+BuildRequires:	pkgconfig(dbus-glib-1)
+BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	intltool
-BuildRequires:	libxfce4-panel-devel >= 4.10.0
-BuildRequires:	polkit-1-devel
-BuildRequires:	libxfce4ui-devel >= 4.10.0
+BuildRequires:	pkgconfig(xfce4-panel-1.0) >= 4.10.0
+BuildRequires:	pkgconfig(polkit-gobject-1)
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.10.0
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
-Requires:	upower
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
 Requires(pre):	xfconf
 
@@ -28,8 +29,12 @@ A power manager dedicated for Xfce desktop environment.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
+#needed for patch 0
+NOCONFIGURE=1 xdt-autogen
+
 %configure2_5x \
 	--enable-dpms \
 	--enable-panel-plugins \
