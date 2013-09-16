@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	intltool
-BuildRequires:	pkgconfig(xfce4-panel-1.0) >= 4.10.0
+BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.10.0
 BuildRequires:	pkgconfig(polkit-gobject-1)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.10.0
 Requires:	pm-utils
