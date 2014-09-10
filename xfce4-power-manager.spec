@@ -2,8 +2,8 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.2.0
-Release:	5
+Version:	1.3.1
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -15,9 +15,9 @@ BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	intltool
-BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.10.0
+BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.11
 BuildRequires:	pkgconfig(polkit-gobject-1)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.10.0
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 Requires:	pm-utils
 Requires:	hibernate
 Requires:	suspend-s2ram
