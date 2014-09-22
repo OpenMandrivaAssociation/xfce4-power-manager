@@ -14,6 +14,7 @@ Patch0:		xfce4-power-manager-1.2.0-add-systemd-logind-support.patch
 BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
+BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.11
 BuildRequires:	pkgconfig(polkit-gobject-1)
