@@ -12,6 +12,7 @@ Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}
 BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
+BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.11
 BuildRequires:	pkgconfig(polkit-gobject-1)
