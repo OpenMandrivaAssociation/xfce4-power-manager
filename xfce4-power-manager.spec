@@ -3,7 +3,7 @@
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
 Version:	1.3.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -21,7 +21,9 @@ BuildRequires:	pkgconfig(polkit-gobject-1)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 Requires:	pm-utils
 Requires:	hibernate
+%if %mdvver < 201500
 Requires:	suspend-s2ram
+%endif
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
 Requires(pre):	xfconf
 Requires:	upower
