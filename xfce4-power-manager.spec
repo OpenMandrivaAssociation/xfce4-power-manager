@@ -49,14 +49,13 @@ A power manager dedicated for Xfce desktop environment.
 %doc AUTHORS NEWS README TODO
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_sbindir}/xfpm-power-backlight-helper
+%{_sbindir}/xfce4-pm-helper
 %{_bindir}/%{name}*
-%{_bindir}/xfce4-power-information
-%{_libdir}/xfce4/panel-plugins/xfce4-brightness-plugin
+%{_libdir}/xfce4/panel/plugins/libxfce4powermanager.so
 %{_datadir}/polkit-1/actions/org.xfce.power.policy
+%{_datadir}/appdata/xfce4-power-manager.appdata.xml
+%{_datadir}/xfce4/panel/plugins/power-manager-plugin.desktop
 %{_datadir}/applications/*.desktop
-%{_datadir}/xfce4/doc/C/images/*.png
-%{_datadir}/xfce4/doc/C/xfce4-power-manager.html
-%{_datadir}/xfce4/panel-plugins/*.desktop
 %{_iconsdir}/hicolor/scalable/*/*.svg
 %{_iconsdir}/hicolor/*/*/*.png
 %{_mandir}/man1/*
