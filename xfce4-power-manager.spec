@@ -2,21 +2,21 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.4.2
-Release:	2
+Version:	1.4.3
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(libxfconf-0) >= 4.10.0
+BuildRequires:	pkgconfig(libxfconf-0) >= 4.12.0
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	intltool
-BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.11
+BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.12
 BuildRequires:	pkgconfig(polkit-gobject-1)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
 Requires:	pm-utils
 Requires:	hibernate
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
