@@ -17,7 +17,7 @@ BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(libxfce4panel-2.0) >= 4.12
 BuildRequires:	pkgconfig(polkit-gobject-1)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
+BuildRequires:	pkgconfig(libxfce4ui-2) >= 4.12
 Requires:	hibernate
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
 Requires(pre):	xfconf
