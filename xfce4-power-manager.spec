@@ -1,9 +1,10 @@
 %define url_ver %(echo %{version} | cut -c 1-3)
+%define _disable_rebuild_configure 1
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.4.3
-Release:	2
+Version:	1.6.0
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
@@ -14,7 +15,7 @@ BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	intltool
-BuildRequires:	pkgconfig(libxfce4panel-1.0) >= 4.12
+BuildRequires:	pkgconfig(libxfce4panel-2.0) >= 4.12
 BuildRequires:	pkgconfig(polkit-gobject-1)
 BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
 Requires:	hibernate
