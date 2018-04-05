@@ -1,9 +1,9 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -d. -f1,2)
 %define _disable_rebuild_configure 1
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.6.0
+Version:	1.6.1
 Release:	1
 Epoch:		1
 License:	GPLv2+
