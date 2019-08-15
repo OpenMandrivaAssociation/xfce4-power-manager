@@ -3,22 +3,26 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.6.1
+Version:	1.6.5
 Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(libxfconf-0) >= 4.12.0
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(libxfconf-0)
+BuildRequires:	pkgconfig(libxfce4ui-2)
+BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	intltool
-BuildRequires:	pkgconfig(libxfce4panel-2.0) >= 4.12
 BuildRequires:	pkgconfig(polkit-gobject-1)
-BuildRequires:	pkgconfig(libxfce4ui-2) >= 4.12
+BuildRequires:	pkgconfig(xscrnsaver)
+BuildRequires:	pkgconfig(xtst)
 Requires:	hibernate
+Requires:	xfce4-panel
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
 Requires(pre):	xfconf
 Requires:	upower
@@ -28,7 +32,7 @@ A power manager dedicated for Xfce desktop environment.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
@@ -38,10 +42,10 @@ A power manager dedicated for Xfce desktop environment.
 	--enable-polkit \
 	--enable-xfce4panel
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} %{name}.lang
 
