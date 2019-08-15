@@ -57,7 +57,7 @@ A power manager dedicated for Xfce desktop environment.
 %{_bindir}/%{name}*
 %{_libdir}/xfce4/panel/plugins/libxfce4powermanager.so
 %{_datadir}/polkit-1/actions/org.xfce.power.policy
-%{_datadir}/appdata/xfce4-power-manager.appdata.xml
+%{_datadir}/metainfo/xfce4-power-manager.appdata.xml
 %{_datadir}/xfce4/panel/plugins/power-manager-plugin.desktop
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/scalable/*/*.svg
