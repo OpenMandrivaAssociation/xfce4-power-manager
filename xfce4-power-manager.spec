@@ -3,13 +3,14 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	1.6.6
+Version:	4.16.0
 Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/apps/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
+
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	pkgconfig(libxfce4ui-2)
@@ -50,7 +51,7 @@ A power manager dedicated for Xfce desktop environment.
 %find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%doc AUTHORS NEWS README TODO
+%doc AUTHORS NEWS README* TODO
 %{_sysconfdir}/xdg/autostart/*.desktop
 %{_sbindir}/xfpm-power-backlight-helper
 %{_sbindir}/xfce4-pm-helper
