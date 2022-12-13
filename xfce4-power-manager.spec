@@ -3,7 +3,7 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	4.16.0
+Version:	4.17.1
 Release:	1
 Epoch:		1
 License:	GPLv2+
