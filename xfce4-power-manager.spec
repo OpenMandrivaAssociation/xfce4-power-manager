@@ -3,9 +3,8 @@
 
 Summary:	A power manager for Xfce
 Name:		xfce4-power-manager
-Version:	4.17.1
+Version:	4.18.0
 Release:	1
-Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 Url:		http://goodies.xfce.org/projects/applications/%{name}
