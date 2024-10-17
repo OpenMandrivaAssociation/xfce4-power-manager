@@ -7,7 +7,7 @@ Version:	4.18.4
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-Url:		http://goodies.xfce.org/projects/applications/%{name}
+Url:		https://goodies.xfce.org/projects/applications/%{name}
 Source0:	http://archive.xfce.org/src/xfce/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(gtk+-3.0)
