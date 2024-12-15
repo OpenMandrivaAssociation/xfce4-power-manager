@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(wayland-scanner)
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xrandr)
-BuildRequires:  polkit-devel
+
 Requires:	xfce4-panel
 Conflicts:	mandriva-xfce-config-common < 2009.1-2
 Requires(pre):	xfconf
