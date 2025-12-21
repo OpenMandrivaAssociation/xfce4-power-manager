@@ -10,6 +10,11 @@ Group:		Graphical desktop/Xfce
 Url:		https://goodies.xfce.org/projects/applications/%{name}
 Source0:	https://archive.xfce.org/src/xfce/xfce4-power-manager/%{url_ver}/%{name}-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(gdk-wayland-3.0)
